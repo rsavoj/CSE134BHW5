@@ -10,12 +10,16 @@
     --color1:color-mix(in lch, magenta, maroon);
     ;
 }
+rating-widget span {
+    font-size: 2rem;
+    color: blue;
+}
 rating-widget .notColored {
-    font-size: 2 rem;
+    font-size: 2rem;
     color: var(--formActiveColor);
 }
 rating-widget .colored {
-    font-size: 5 rem;
+    font-size: 5rem;
     color: red;
 }
 
