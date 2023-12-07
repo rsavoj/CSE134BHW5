@@ -26,7 +26,7 @@ class ratingWidget extends HTMLElement {
         const star5 = document.createElement('span');
         star5.innerHTML = '&star;'; 
         star5.id = 'star5';  
-        star1.class = 'notColored'; 
+        star1.class = 'colored'; 
         this.shadowRoot.appendChild(heading);
         this.shadowRoot.appendChild(star1);
         this.shadowRoot.appendChild(star2);
