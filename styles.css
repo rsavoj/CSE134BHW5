@@ -10,6 +10,10 @@
     --color1:color-mix(in lch, magenta, maroon);
     ;
 }
+rating-widget span {
+    font-size: 2 rem;
+    color: var(--formActiveColor);
+}
 
 :user-invalid{
     background-color: rgb(234, 149, 149);
