@@ -8,6 +8,10 @@ class ratingWidget extends HTMLElement {
                         font-size: 5rem;
                         color: red;
                     }
+                    .notColored {
+                        font-size: 2rem;
+                        color: orange;
+                    }
                 </style>`;
         const heading = document.createElement('h2');
         heading.textContent = 'Ratings Widget';
