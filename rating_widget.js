@@ -2,6 +2,13 @@ class ratingWidget extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'})
+        this.shadowRoot.innerHTML = `
+				<style>
+                    .colored {
+                        font-size: 5rem;
+                        color: red;
+                    }
+                </style>`;
         const heading = document.createElement('h2');
         heading.textContent = 'Ratings Widget';
 
@@ -29,9 +36,9 @@ class ratingWidget extends HTMLElement {
         star1.className = 'colored'; 
         this.shadowRoot.appendChild(heading);
         this.shadowRoot.appendChild(star1);
-        this.appendChild(star2);
-        this.appendChild(star3);
-        this.appendChild(star4);
+        this.shadowRoot.appendChild(star2);
+        this.shadowRoot.appendChild(star3);
+        this.shadowRoot.appendChild(star4);
         this.shadowRoot.appendChild(star5);
 
     }
