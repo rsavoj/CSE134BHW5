@@ -4,7 +4,7 @@ class RatingWidget extends HTMLElement {
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
 				<style>
-                    .Colored {
+                    span .Colored {
                         font-size: 5rem;
                         color: red;
                     }
