@@ -43,6 +43,9 @@ class RatingWidget extends HTMLElement {
 
         this.star1.addEventListener('mouseover', () => this.onStarHoverOne());
         this.star2.addEventListener('mouseover', () => this.onStarHoverTwo());
+        this.star3.addEventListener('mouseover', () => this.onStarHoverThree());
+        this.star4.addEventListener('mouseover', () => this.onStarHoverFour());
+        this.star5.addEventListener('mouseover', () => this.onStarHoverFive());
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
@@ -57,6 +60,27 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.remove('colored');
         this.star4.classList.remove('colored');
         this.star5.classList.remove('colored');
+    }
+    onStarHoverThree() {
+        this.star1.classList.add('colored');
+        this.star2.classList.add('colored');
+        this.star3.classList.add('colored');
+        this.star4.classList.remove('colored');
+        this.star5.classList.remove('colored');
+    }
+    onStarHoverFour() {
+        this.star1.classList.add('colored');
+        this.star2.classList.add('colored');
+        this.star3.classList.add('colored');
+        this.star4.classList.add('colored');
+        this.star5.classList.remove('colored');
+    }
+    onStarHoverFive() {
+        this.star1.classList.add('colored');
+        this.star2.classList.add('colored');
+        this.star3.classList.add('colored');
+        this.star4.classList.add('colored');
+        this.star5.classList.add('colored');
     }
     
 }
