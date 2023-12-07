@@ -2,8 +2,11 @@ class ratingWidget extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'})
-        heading='<h2>Ratings Widget</h2>'
-        star='<p> &star </p>'
+        const heading = document.createElement('h2');
+        heading.textContent = 'Ratings Widget';
+
+        const starParagraph = document.createElement('p');
+        starParagraph.innerHTML = '&star;'; 
         this.shadowRoot.appendChild(heading);
         this.shadowRoot.appendChild(star);
 
