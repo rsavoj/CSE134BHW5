@@ -6,21 +6,21 @@ class ratingWidget extends HTMLElement {
         heading.textContent = 'Ratings Widget';
 
         const star1 = document.createElement('span');
-        star1.innerHTML = '&star1;'; 
+        star1.innerHTML = '&star;'; 
         star1.id = 'star1';
         
         const star2 = document.createElement('span');
-        star2.innerHTML = '&star2;'; 
+        star2.innerHTML = '&star;'; 
         star2.id = 'star2';  
 
         const star3 = document.createElement('span');
-        star3.innerHTML = '&star3;'; 
+        star3.innerHTML = '&star;'; 
         star3.id = 'star3';  
         const star4 = document.createElement('span');
-        star4.innerHTML = '&star4;'; 
+        star4.innerHTML = '&star;'; 
         star4.id = 'star4';  
         const star5 = document.createElement('span');
-        star5.innerHTML = '&star5;'; 
+        star5.innerHTML = '&star;'; 
         star5.id = 'star5';  
 
       
