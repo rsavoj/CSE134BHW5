@@ -4,7 +4,6 @@ class RatingWidget extends HTMLElement {
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
 				<style>
-                   
                     .colored  {
                         font-size: 2rem;
                         color: orange;
