@@ -45,6 +45,16 @@ class ratingWidget extends HTMLElement {
         this.shadowRoot.appendChild(this.star4);
         this.shadowRoot.appendChild(this.star5);
 
+        this.star1.addEventListener('mouseover', () => this.onStarHoverOne());
     }
+    onStarHoverOne() {
+        this.star1.classList.add('colored');
+        this.star1.classList.add('notcolored');
+        this.star2.classList.add('notcolored');
+        this.star3.classList.add('notcolored');
+        this.star4.classList.add('notcolored');
+        this.star5.classList.add('notcolored');
+    }
+    
 }
 window.customElements.define('rating-widget', ratingWidget)
