@@ -3,7 +3,7 @@ class RatingWidget extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
-                <form action="http://httpbin.org/post" method ="post">
+                <form id=form1 action="http://httpbin.org/post" method ="post">
                     <label for="rating">How satisfied are you feeling?</label>
                     <input type="hidden" name="question" value="How satisfied are you?">
                
@@ -57,6 +57,15 @@ class RatingWidget extends HTMLElement {
         this.star3.addEventListener('mouseover', () => this.onStarHoverThree());
         this.star4.addEventListener('mouseover', () => this.onStarHoverFour());
         this.star5.addEventListener('mouseover', () => this.onStarHoverFive());
+        this.star1.addEventListener('click', () => this.onStarClick());
+        this.star2.addEventListener('click', () => this.onStarClick());
+        this.star3.addEventListener('click', () => this.onStarClick());
+        this.star4.addEventListener('click', () => this.onStarClick());
+        this.star5.addEventListener('click', () => this.onStarClick());
+    }
+    onStarClick(){
+        const formPressed = this.shadowRoot.getElementById('form1');
+        formPressed.submit();
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
@@ -84,6 +93,7 @@ class RatingWidget extends HTMLElement {
         this.star5.classList.remove('colored');
         const ratingInput = this.shadowRoot.getElementById('rating');
         ratingInput.value = 3;
+        console.log(3);
     }
     onStarHoverFour() {
         this.star1.classList.add('colored');
