@@ -16,10 +16,10 @@ class RatingWidget extends HTMLElement {
         const heading = document.createElement('h2');
         heading.textContent = 'Ratings Widget';
 
-        const star1 = document.createElement('span');
-        star1.innerHTML = '&star;'; 
-        star1.id = 'star1';
-        star1.className = 'notColored'; 
+        this.star1 = document.createElement('span');
+        this.star1.innerHTML = '&star;'; 
+        this.star1.id = 'star1';
+        this.star1.className = 'notColored'; 
         
         const star2 = document.createElement('span');
         star2.innerHTML = '&star;'; 
@@ -39,7 +39,7 @@ class RatingWidget extends HTMLElement {
         star5.id = 'star5';  
         star5.className = 'colored'; 
         this.shadowRoot.appendChild(heading);
-        this.shadowRoot.appendChild(star1);
+        this.shadowRoot.appendChild(this.star1);
         this.shadowRoot.appendChild(star2);
         this.shadowRoot.appendChild(star3);
         this.shadowRoot.appendChild(star4);
