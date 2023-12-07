@@ -11,7 +11,7 @@ class RatingWidget extends HTMLElement {
                     <no
                     <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
                
-                    <button type="submit">Submit</button>
+                    <button type="hidden">Submit</button>
 
                 </form>  
                 <style>
@@ -64,6 +64,8 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.remove('colored');
         this.star4.classList.remove('colored');
         this.star5.classList.remove('colored');
+        const ratingInput = this.shadowRoot.getElementById('rating');
+        ratingInput.value = 1;
     }
     onStarHoverTwo() {
         this.star1.classList.add('colored');
@@ -71,6 +73,8 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.remove('colored');
         this.star4.classList.remove('colored');
         this.star5.classList.remove('colored');
+        const ratingInput = this.shadowRoot.getElementById('rating');
+        ratingInput.value = 2;
     }
     onStarHoverThree() {
         this.star1.classList.add('colored');
@@ -78,6 +82,8 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.add('colored');
         this.star4.classList.remove('colored');
         this.star5.classList.remove('colored');
+        const ratingInput = this.shadowRoot.getElementById('rating');
+        ratingInput.value = 3;
     }
     onStarHoverFour() {
         this.star1.classList.add('colored');
@@ -85,6 +91,8 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.add('colored');
         this.star4.classList.add('colored');
         this.star5.classList.remove('colored');
+        const ratingInput = this.shadowRoot.getElementById('rating');
+        ratingInput.value = 4;
     }
     onStarHoverFive() {
         this.star1.classList.add('colored');
@@ -92,6 +100,8 @@ class RatingWidget extends HTMLElement {
         this.star3.classList.add('colored');
         this.star4.classList.add('colored');
         this.star5.classList.add('colored');
+        const ratingInput = this.shadowRoot.getElementById('rating');
+        ratingInput.value = 5;
     }
     
 }
