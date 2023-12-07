@@ -6,8 +6,11 @@ class RatingWidget extends HTMLElement {
                 <form action="http://httpbin.org/post" method ="post">
                     <label for="rating">How satisfied are you feeling?</label>
                     <input type="hidden" name="question" value="How satisfied are you?">
+               
                     <input type="hidden" name="sentBy" value="HTML">
-                    <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+                    <no
+                    <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
+               
                     <button type="submit">Submit</button>
 
                 </form>  
