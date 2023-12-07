@@ -38,12 +38,12 @@ class RatingWidget extends HTMLElement {
         star5.innerHTML = '&star;'; 
         star5.id = 'star5';  
         star5.className = 'colored'; 
-        this.shadowRoot.appendChild(this.heading);
-        this.shadowRoot.appendChild(this.star1);
-        this.shadowRoot.appendChild(this.star2);
-        this.shadowRoot.appendChild(this.star3);
-        this.shadowRoot.appendChild(this.star4);
-        this.shadowRoot.appendChild(this.star5);
+        this.shadowRoot.appendChild(heading);
+        this.shadowRoot.appendChild(star1);
+        this.shadowRoot.appendChild(star2);
+        this.shadowRoot.appendChild(star3);
+        this.shadowRoot.appendChild(star4);
+        this.shadowRoot.appendChild(star5);
 
         this.star1.addEventListener('mouseover', () => this.onStarHoverOne());
     }
