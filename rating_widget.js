@@ -1,4 +1,4 @@
-class ratingWidget extends HTMLElement {
+class RatingWidget extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'})
@@ -57,4 +57,4 @@ class ratingWidget extends HTMLElement {
     }
     
 }
-window.customElements.define('rating-widget', ratingWidget)
+window.customElements.define('rating-widget', RatingWidget)
