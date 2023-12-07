@@ -46,10 +46,17 @@ class RatingWidget extends HTMLElement {
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
+        this.star2.classList.remove('colored');
+        this.star3.classList.remove('colored');
+        this.star4.classList.remove('colored');
+        this.star5.classList.remove('colored');
     }
     onStarHoverTwo() {
         this.star1.classList.add('colored');
         this.star2.classList.add('colored');
+        this.star3.classList.remove('colored');
+        this.star4.classList.remove('colored');
+        this.star5.classList.remove('colored');
     }
     
 }
