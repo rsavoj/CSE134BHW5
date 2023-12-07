@@ -6,7 +6,7 @@ class ratingWidget extends HTMLElement {
         heading.textContent = 'Ratings Widget';
 
         const starParagraph = document.createElement('p');
-        starParagraph.innerHTML = '&star;'; 
+        starParagraph.innerHTML = '&star &star hi'; 
         this.shadowRoot.appendChild(heading);
         this.shadowRoot.appendChild(star);
 
