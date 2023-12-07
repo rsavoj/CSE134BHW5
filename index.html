@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya Savoj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Roya, Resume, Goals, contact, Savoj">
+    <title>Roya Savoj Profolio</title>
+    <link rel="stylesheet" href="styles.css" id="standardStyle" media="screen" type="text/css">
+    <noscript>
+        <link rel="stylesheet" href="styles_nojs.css" id="standardStyle" media="screen" type="text/css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <section id="headerID">
+            <h1 class="mainHeader"><span id="title">Roya Savoj</span></h1>  
+        </section>
+    </header>
+    
+    <main>
+        
+        <div id="navigation">
+          
+            <a href="#aboutme">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contant</a>
+
+        </div>
+        <section id="aboutme">
+           
+            <h2 id="aboutmetitle">About Roya:</h2>
+            <hr>
+            <div id="pictures">
+                <picture id="picture1">
+                    <source media="(min-width: 1000px)" width="500" height="500" srcset="images/royaboat.png" >
+                    <source media="(min-width: 860px)" width="400" height="400" srcset="images/royaboat.png" >
+                    <source media="(min-width: 660px)" width="300" height="300" srcset="images/RoyaBoat-mini.jpeg" >
+                    <source media="(min-width: 520px)" width="250" height="250" srcset="images/RoyaBoat-mini.jpeg" >
+                    <img src="images/RoyaBoat-mini.jpeg" alt="Another Photo of Me" height="150" width="150" >
+                </picture>     
+                <picture id="picture2"> 
+                    <source media="(min-width: 1000px)" width="500" height="500" srcset="images/Roya.png" >
+                    <source media="(min-width: 860px)" width="400" height="400" srcset="images/Roya.png" >
+                    <source media="(min-width: 660px)" width="300" height="300" srcset="images/Roya-min.jpeg" >   
+                    <source media="(min-width: 520px)" width="250" height="250" srcset="images/Roya-min.jpeg" > 
+                    <img src="images/Roya-min.jpeg" height="150" width="150" alt="Image of Roya">
+                </picture>
+            </div> 
+            <br>    
+            <p>Roya Savoj is a fourth year chemistry major at the University of California San Diego. She has two minors one in computer science and one in health care and social issues. She plans on pursing a PHD in computational chemistry</p>
+           
+            <!--This will be filled in with a real image when java is active-->
+        </section>
+        <section id="education">
+            <h2>Education:</h2>
+                <hr>
+                <p><strong>University of California San Diego</strong> (September 2020 - June 2024)</p>
+                <p><em>B.S. General Chemistry with Minor in Computer Science and Health Care and Social Issues</em></p>
+                <p>GPA: 3.95, Honors Society</p>
+        </section>
+
+        <section id="experience">
+            <h2> Experience:</h2>
+            <hr>
+               
+            <details>
+            <summary><h3>Paesani Reasearch Lab</h3></summary>
+            <nav><a href="https://paesanigroup.ucsd.edu/">Paesani Group</a></nav>
+            <p>Dates participated: Feburary 2022-present</p>
+               <ul>
+                    <li> Presented at <b>SoCalTheoChem</b> 2023</li>
+                    <li> Evaluate the effects of aqueous alkali ions on the hydration shells of water using simulated IR spectroscopy, radial distribution functions, residence time and average dipole moment.</li>
+                    <li> Run NVE, NVT and NPT simulations of ions in a box of water molecules LAMMPS Molecular Dynamic Simulator.</li>
+                    <li> Write python code to calculate the residence time of ions in solution and the average dipole moment </li>
+                    <li> Create figures using matplotlib and jupyter notebook</li>
+                </ul>
+            </details>
+            <details>
+                <summary><h3>Supplemental Instruction Leader for Organic Chemistry | Course Leader</h3></summary>
+                <nav><a href="https://aah.ucsd.edu/supplemental-instruction/index.html">Academic Achivment Hub (SI)</a></nav>     
+                <p>Dates participated: September 2021-present</p>
+                <ul>
+                    <li> Facilitate three 50 minute discussions every week with 10-20 students. </li>
+                    <li> Prepare question banks, review tools and targeted activities for student use.</li>
+                    <li> Facilitated over 200 SI sessions over 8 quarters.</li>
+                    <li> Observe other SI leaders' sessions and give them feedback on how to implement higher levels of learning into their session.</li>
+                </ul>
+            </details>
+            <details>
+                <summary><h3>Product Design Intern </h3></summary>
+                <nav><a href="http://windhoverventures.com/">Windhover Ventures LLC</a></nav>
+             
+                <p>Dates participated:  February 2023 - June 2023</p>  
+                <ul>
+                    <li> Market and design five products for Latino skin care, filling a gap in an underserved market.</li>
+                    <li> Conducted in-depth research on the underlying mechanisms of skin components, focusing on melanin production, water content, and elasticity regulation. </li>
+                    <li> Deliver a product pitch research presentation to stakeholders at Windover Ventures LLC.</li>
+                </ul>
+            </details>
+            <details>
+                <summary><h3>Computer Science Summer Institute (CSSI)</h3></summary>
+                <nav><a href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute">Google Computer Science Summer Institute</a></nav>
+                <p>Dates participated: Summer 2020</p>  
+                <ul>
+                    <li> Market and design five products for specialized skin care</li>
+                    <li> Conducted in-depth research on the underlying mechanisms of skin components, focusing on melanin production,
+                        water content, and elasticity regulation</li>
+                    <li> Deliver a product pitch research presentation to stakeholders at Windover Ventures LLC.</li>
+                </ul>
+            </details>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="http://httpbin.org/get" method ="get">
+                <fieldset>
+                    <label for="nameEntry">Enter name: 
+                    <br>
+                    
+                    <input type="text" id="nameEntry"  name="nameEntry" required >
+                    <span class="error" id="error_name" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <label for="email">Enter Email: </label>
+                    <br>
+                    <input id="email" type="email" name="email" required   >
+                    <span class="error" id="error_email" aria-live="polite"></span>
+                   
+                    
+                    <br>
+                    <label for="comments">Message: </label>
+                    <br>
+                    <textarea id="comments" name="comments" required minlength="10"  maxlength="500"></textarea>
+                   <!--
+
+                    <span class="error" id="error_comments" aria-live="polite"></span>
+                   --> 
+                    <div id="error_comments" style="display: none;">
+                        
+                    </div>
+                    <br>
+                   <input type="hidden" id="form_errors" name="form_errors">
+                   <input type="hidden" name="possible_bot" value="true">
+
+                    <br>
+                    
+                      
+                  
+                    <input type="submit" id="submit" value="submit">
+                </fieldset>
+            </form>
+            <script >
+                let form_errors = [];
+                const form = document.querySelector("form")
+                const email = document.getElementById("email");
+                const error_email = document.getElementById("#email + span.error");
+                const name_input = document.getElementById("nameEntry");
+                const error_name = document.querySelector("#nameEntry + span.error");
+                const comments = document.getElementById("comments");
+               
+                const error_comments = document.getElementById("error_comments")
+                
+                email.addEventListener("input", (event) => {
+                    if (email.validity.typeMismatch) {
+                        email.setCustomValidity("Please Enter A valid Email Address!");
+                       
+                        email.reportValidity();
+                        myJSON = '{"email_not_valid":"' + email.value +'"}';
+                        form_errors.push(JSON.parse(myJSON))
+
+
+                        event.preventDefault();
+                        
+                    } 
+                    else if(email.validity.valueMissing){
+                        email.setCustomValidity("Email Address is required");
+                       
+                        email.reportValidity();
+                        myJSON = '{"email_required":"' + email.value +'"}';
+                        form_errors.push(JSON.parse(myJSON))
+                        event.preventDefault();
+                    }
+                    else {
+                        email.setCustomValidity("");
+                    
+                    }
+                });
+                name_input.addEventListener("change", (event) => {
+                    
+                    const reg = /^[\w\s]*$/;
+                    if (!(reg.test(name_input.value))) { 
+                        
+                        name_input.setCustomValidity("Please Enter A name with valid characters");
+                        name_input.reportValidity();
+                        error_name.textContent = "Error Nonstandard Character"
+                        myJSON = '{"name_nonstandardChar":"' + name_input.value +'"}';
+                        form_errors.push(JSON.parse(myJSON));
+                        error_name.style.display="block";
+                        event.preventDefault();
+                    }
+                  
+                    else if (name_input.validity.valueMissing) {
+                        name_input.setCustomValidity("Name is required");
+                        name_input.reportValidity();
+                       
+                        error_name.textContent = "Name is required!"
+                        myJSON = '{"name_required":"' + name_input.value +'"}';
+                        form_errors.push(JSON.parse(myJSON));
+                        event.preventDefault();
+                    }
+                    else{
+                        error_name.textContent = " ";
+                        error_name.className = "error"
+                    }
+                });
+                comments.addEventListener("input", (event) => {
+                    const regex = /^[\w\s.,!?]*$/;
+                    const reg =  /[^\w\s.,!?]/g;
+                    if (!(regex.test(comments.value))) { 
+                        characterInvalid = comments.value[comments.value.search(reg)];
+                        report = "Invalid Character: " + characterInvalid
+                        error_comments.innerHTML = report;
+                        error_comments.style.display="block";
+                        
+                        comments.setCustomValidity(report);
+                        comments.reportValidity();
+                        myJSON = '{"comments_value_error":"' + report +'"}';
+                        form_errors.push(JSON.parse(myJSON));
+                        error_comments.classList.add('translate');
+                        
+                      
+                        
+                        event.preventDefault();
+                    }
+                    else if(comments.validity.tooShort){
+                        comments.setCustomValidity("Please Enter a longer message");
+                        comments.reportValidity();
+                        myJSON = '{"comments_tooShort":"' + comments.value +'"}';
+                        form_errors.push(JSON.parse(myJSON));
+                        error_comments.classList.remove('translate')
+                       
+                    }
+                    else if(comments.validity.tooLong){
+                        
+                        comments.setCustomValidity("Please Enter a shorter message");
+                        comments.reportValidity();
+                        error_comments.classList.remove('translate')
+                      
+                    }
+                    else{
+                        error_comments.classList.remove('translate')
+                        let length = comments.value.length
+                        let charactersRemaining = 500-length
+                        let charsLeft = "Characters Remaining: " + charactersRemaining
+                        error_comments.innerHTML = charsLeft
+                        error_comments.style.display="block";
+                        comments.className = "valid";
+                        comments.setCustomValidity("");
+                        comments.className = "error";
+                        document.getElementById("error_comments")
+                       
+                        if(Number(charactersRemaining) <= 40){
+                            error_comments.classList.add('enphasize');
+                        }else{
+                            
+                        }
+                        
+                    }
+                });
+                
+                form.addEventListener("submit", async (e) => {
+                    
+                    let form_err = document.getElementById("form_errors")
+                    stringError = JSON.stringify(form_errors);
+                    form_err.setAttribute('value',stringError);
+                    //event.preventDefault();
+                    
+                });
+                 
+          
+            </script>
+        </section>
+    </main>
+ 
+    
+    <footer>
+        <h3 id="introanimation"> Thanks!</h3>
+        <noscript>Java script is disabled, to change to night mode please enable js!</noscript>
+        <h5 class="only_Java">Flip switch to change to night mode</h5>
+        
+        <form class="only_Java">
+            <label class="switch" class="only_Java">
+                <input type="checkbox" class="only_Java" id="mode" name="mode">
+                <span class="slider" class="only_Java"></span>
+            </label>
+            <br>
+            <label for="theme_selection">Theme:</label>
+            
+            <select id="theme_selection" name="theme_selection">
+                <option value="Normal">Normal</option>
+                <option value="Custom">Custom</option>
+                <option value="Christmass">Christmass</option>
+            </select>
+            <section id="customTheme" style="display: none;">
+                <br>
+                <label for="text-color-picker">Text Color:</label>
+                <br>
+                <input type="color" id="text-color-picker">
+                <br>
+                <label for="bg-color-picker">Background Color:</label>
+                <br>
+                <input type="color" id="bg-color-picker">
+                <br>
+                <label for="font-selector">Font:</label>
+                <br>
+                <select id="font-selector">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                <!-- Add more font options as needed -->
+                <br>
+                </select>
+            </section>
+        </form>
+        
+       
+        <script>
+             
+            let root_acess = document.querySelector(':root');
+            let theme = document.getElementById("theme_selection");
+            root_acess.style.setProperty( '--backgroundColorHeader:', 'blue');
+            let checkBox = document.getElementById("mode");
+            const checkedState= localStorage.getItem('checkboxState')
+            const themeState= localStorage.getItem('themeState')
+            const textColorPicker = document.getElementById("text-color-picker");
+            const bgColorPicker = document.getElementById("bg-color-picker");
+            const fontSelector = document.getElementById("font-selector");
+            
+            
+            if(checkedState){
+                checkBox.checked =JSON.parse(checkedState) 
+            }
+            if(themeState){
+                theme.value = JSON.stringify(themeState)
+            }
+            window.onload = paint;
+            
+            checkBox.addEventListener("change", (event) => {
+                if (checkBox.checked == true){
+                    changeToDark()
+                }else{
+                    changeToLight()
+                }
+               
+                saveToLocalStorageCheck();
+                
+        
+            });
+            function saveToLocalStorageCheck(){
+                localStorage.setItem('checkboxState', checkBox.checked);
+                    
+            }
+            function saveToLocalStorageTheme(){
+                localStorage.setItem('themeState', JSON.stringify(theme.value));
+            }
+            function changeToDark(){
+                root_acess.style.setProperty( '--backgroundColorBody', 'SlateGrey');
+                root_acess.style.setProperty( '--headerColorFont', 'black');
+                root_acess.style.setProperty( '--backgroundColorHeader', 'DarkSlateGrey');
+                root_acess.style.setProperty( '--lightFontColor', 'RebeccaPurple');
+            }
+            function changeToLight(){
+                root_acess.style.setProperty( '--detailsColor', '#b2bdc9');
+                root_acess.style.setProperty( '--formActiveColor', '#B2BEB5');
+                root_acess.style.setProperty( '--backgroundColorHeader', '#B2BEB5');
+                root_acess.style.setProperty( '--detailsColor', '#b2bdc9');
+                root_acess.style.setProperty( '--backgroundColorHeaderDark', '#91a195');
+                root_acess.style.setProperty( '--backgroundColorBody', '#DEDEDE');
+                root_acess.style.setProperty( '--headerColorFont', '#36454F');
+                root_acess.style.setProperty( '--lightFontColor', 'FloralWhite');
+            }
+            function paint(){
+                let checkBox = document.getElementById("mode");
+                customTheme.style.display="none";
+                if (checkBox.checked == true){
+                    changeToDark();
+                }
+                else{
+                    changeToLight(); 
+                }
+                let theme = document.getElementById("theme_selection");
+                if(theme.value === "Christmass"){
+                    updateChristmassTheme()
+                }
+                else if(theme.value === "Custom"){
+                    updateAllCustom();
+                }
+                saveToLocalStorageCheck();
+                saveToLocalStorageTheme();
+            }   
+           
+            
+            
+            theme.addEventListener("change", (event) => {
+                saveToLocalStorageTheme();
+                if(theme.value === "Custom"){
+                    updateAllCustom();
+                }
+                else if (theme.value === "Christmass"){
+                    customTheme.style.display="none";
+                    updateChristmassTheme();
+                }
+                else{
+                    paint();
+                    customTheme.style.display="none";
+                }
+                
+            }); 
+            function updateCustomTheme(){
+                root_acess.style.setProperty( '--backgroundColorBody',  bgColorPicker.value);
+                root_acess.style.setProperty( '--headerColorFont',  textColorPicker.value);
+                document.body.style.fontFamily = fontSelector.value;
+            }
+            function updateChristmassTheme(){
+                document.body.style.fontFamily ="Garamond";
+                root_acess.style.setProperty( '--backgroundColorBody', 'green');
+                root_acess.style.setProperty( '--headerColorFont',  'red');
+                customTheme.style.display="none";
+            }
+            function updateAllCustom(){
+                customTheme.style.display= "block";
+                    
+                textColorPicker.addEventListener("input", updateCustomTheme);
+                bgColorPicker.addEventListener("input", updateCustomTheme);
+                fontSelector.addEventListener("change", updateCustomTheme)
+                    
+            }
+             
+        </script>
+       
+        <section id="contactinfo">
+           <h4>contact:</h4>
+            <ol>
+                <li><p>Author: Roya Savoj</p></li>
+        
+            </ol>
+        </section>
+        
+       
+        
+    </footer> 
+
+
+</body>
+
+</html>

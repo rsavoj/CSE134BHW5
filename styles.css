@@ -1,0 +1,271 @@
+:root {
+    --detailsColor: #b2bdc9;
+    --formActiveColor: #a8caef;
+    --backgroundColorHeader: #B2BEB5;
+    --backgroundColorHeaderDark: #91a195;
+    --backgroundColorBody: #DEDEDE;
+    --lightFontColor:FloralWhite;
+    --headerColorFont: #36454F;
+    --color0 : color(display-p3 .93 .163 .869);
+    --color1:color-mix(in lch, magenta, maroon);
+    ;
+}
+
+:user-invalid{
+    background-color: rgb(234, 149, 149);
+}
+:out-of-range{
+    color: blue;
+}
+.message .error{
+    font-size: 1rem;
+    color: red;
+    display: none;
+}
+
+
+html {
+    width: 100vw; 
+}
+@font-face {font-family: "HeaderFont";  
+    src: url(CLARENDON.woff);}
+
+#headerID{
+    padding:0;
+
+}
+h1.mainHeader{ 
+    font-size:4rem;
+    font-family:"HeaderFont", Helvetica;
+    background-color:var(--backgroundColorHeader, olive);
+    margin:0;
+    color:var(--headerColorFont, black);
+    border-style:solid;
+    border-width:3px;
+    padding-top:5px;
+    padding-bottom:5px; 
+    padding-left:5px;
+}
+img {
+    object-fit: cover;
+    object-position: center;
+}
+#navigation{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:var(--headerColorFont, black);
+}
+.enphasize{
+    color: red;
+    font-size: 2rem;
+}
+.translate{
+    color: blue;
+    animation-name: Appear;
+    animation-duration: 4s;
+    opacity: 0;
+}
+@keyframes Appear {
+    0% {opacity: 0;}
+    50% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+#navigation a{
+    color: var(--lightFontColor);
+    font-size: 1rem;
+    text-decoration: none;
+}
+#navigation a:hover{
+    color: grey;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+section{
+    color:var(--headerColorFont, black);
+    border-style:solid;
+    border-width:3px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color:var(--backgroundColorBody,olive);
+}
+#aboutme{
+    margin:0;
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem;
+    background-color:var(--backgroundColorBody,olive); 
+    font-size: 1rem;  
+}
+img{
+    margin: 0.5rem;
+}
+
+#pictures{
+    display: flex;
+    padding:0.2rem;
+
+}
+
+
+#aboutme>h2{
+    margin:0rem;   
+}
+details{
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color:var(--detailsColor, lightblue);
+    & summary > *{
+        display: inline;
+    }
+}
+
+h2{
+    margin:0.1rem;
+    padding:0.25rem;
+    font-size:3rem;
+    color: var(--headerColorFont, black);
+}
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto ;
+    color:black;
+    font-family: baskerville;
+}
+#contact{
+    padding-bottom: 0.5rem;
+}
+button{
+    border-radius: 3rem;
+    color:var(--headerColorFont);
+    font-size: 1rem;
+    font-family: baskerville;
+    background-color: var(--backgroundColorHeader,olive);
+    &:hover{
+        background-color: var(--backgroundColorHeaderDark,darkgreen);
+        transform: scale(1.2,1.2)
+    }
+    &:active{
+        background-color: var(--backgroundColorHeaderDark,darkgreen);
+        transform: scale(1.2,1.2)
+    }
+}
+
+#introanimation{
+    color:var(--headerColorFont);
+    animation-name: buttonfloat;
+    position: relative;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+}
+@keyframes buttonfloat{
+    0%{
+        left:3%;
+        color:blue;
+        color:var(--color1);}
+    25%{ 
+        left:25%;
+        color:green;
+        color:var(--color0);
+    }
+    50%{left:50%; color:lightgrey;}
+    100%{left:70%;color:var(--headerColorFont);}
+}
+
+label{
+    display: inline-block;
+    padding: 1em 1em 1em 0.5em;
+    padding: 1em 1em 1em 0.5em;
+}
+input, textarea{
+    font-family: baskerville;
+    width:80dvw;
+    margin-right:1rem;
+    margin-top:0.1rem;
+    margin-bottom: 0.5rem;
+}
+input:focus{
+    background-color:var(--formActiveColor,  lightblue) ;
+} 
+textarea:focus{
+    background-color:var(--formActiveColor, lightblue ) ;
+}
+
+footer{
+    background-color:var(--backgroundColorHeader,olive) !important;
+    color:var(--headerColorFont, black);
+    border-style:solid;
+    border-width:3px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#navigation:has(a){
+    background-color: lightseagreen;
+} 
+#contactinfo{
+    margin-bottom: 3rem;
+    color:var(--lightFontColor);
+    background-color:var(--headerColorFont, black);
+}
+fieldset{
+    padding-block-start: 0.35%;
+    padding-inline-start: 0.75%;
+    padding-inline-end: 0.75%;
+    padding-block-end: 0.625%;
+  
+   
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    padding: 0;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #000000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+ 
