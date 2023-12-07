@@ -21,9 +21,9 @@ class RatingWidget extends HTMLElement {
         this.star1.id = 'star1';
 
         
-        const star2 = document.createElement('span');
-        star2.innerHTML = '&star;'; 
-        star2.id = 'star2';
+        this.star2 = document.createElement('span');
+        this.star2.innerHTML = '&star;'; 
+        this.star2.id = 'star2';
          
 
         const star3 = document.createElement('span');
@@ -40,20 +40,20 @@ class RatingWidget extends HTMLElement {
         star5.className = 'colored'; 
         this.shadowRoot.appendChild(heading);
         this.shadowRoot.appendChild(this.star1);
-        this.shadowRoot.appendChild(star2);
+        this.shadowRoot.appendChild(this.star2);
         this.shadowRoot.appendChild(star3);
         this.shadowRoot.appendChild(star4);
         this.shadowRoot.appendChild(star5);
 
         this.star1.addEventListener('mouseover', () => this.onStarHoverOne());
+        this.star2.addEventListener('mouseover', () => this.onStarHoverTwo());
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
-        //this.star1.classList.remove('notcolored');
-       // this.star2.classList.add('notcolored');
-        //this.star3.classList.add('notcolored');
-        //this.star4.classList.add('notcolored');
-        //this.star5.classList.add('notcolored');
+    }
+    onStarHoverTwo() {
+        this.star1.classList.add('colored');
+        this.star2.classList.add('colored');
     }
     
 }
