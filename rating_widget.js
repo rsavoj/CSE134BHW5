@@ -11,7 +11,7 @@ class RatingWidget extends HTMLElement {
                     <no
                     <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
                
-                    <button type="hidden">Submit</button>
+                    
 
                 </form>  
                 <style>
