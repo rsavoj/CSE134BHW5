@@ -19,7 +19,7 @@ class RatingWidget extends HTMLElement {
         this.star1 = document.createElement('span');
         this.star1.innerHTML = '&star;'; 
         this.star1.id = 'star1';
-        this.star1.className = 'notColored'; 
+        //this.star1.className = 'notColored'; 
         
         const star2 = document.createElement('span');
         star2.innerHTML = '&star;'; 
