@@ -8,16 +8,14 @@ class WeatherReport extends HTMLElement {
                 <h3> Want the weather? </h3> 
                 <formfield>
                     <form>
-                        <button type="button" class="icon-button">
-                        Tempurature
-                        </button>
-                        <output id="temp"></output> K
+                        
+                       
                         <br>
                         <br>
                         <button type="button" class="icon-button">
                             <img src="buttonImages/CondButton.png" alt="Icon">
                         </button>
-                        <output id="cond"></output>
+                        <output id="temp"></output> 
                     </form>
                 <section>
                     <style>
@@ -66,11 +64,13 @@ class WeatherReport extends HTMLElement {
                         .then(data => {
                             // Display the time
                             const output1 = this.shadowRoot.getElementById('temp');
-                            const output2 = this.shadowRoot.getElementById('cond');
+                            
                             let tempK = (data.main.temp)
-                            let tempC = tempK-273.15 
-                            output1.textContent = tempC;
-                            output2.textContent = data.weather[0].description;
+                            let tempC = tempK-273.15;
+                            let cond = data.weather[0].description;
+                            let conditions = `The tempurature is ${tempC} \u00B0,${cond}`
+                            output1.textContent = conditions;
+                           
                         })
                         .catch(error => {
                             // Handle any errors
