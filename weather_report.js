@@ -6,8 +6,10 @@ class WeatherReport extends HTMLElement {
                 <h3> I want the weather </h3> 
                 
                 <form>
-                <button type="button">Get the weather?</button>
-                <output></output>
+                <button type="button">Tempurature</button>
+                <output id=temp></output>
+                button type="button">Conditions</button>
+                <output id=cond></output>
                 </form>
                 <style>
                     h3 {
@@ -29,8 +31,10 @@ class WeatherReport extends HTMLElement {
                     })
                     .then(data => {
                         // Display the time
-                        output.textContent = data.main.temp;
-                        output.textContent = data.weather.description;
+                        const output1 = this.shadowRoot.getElementById('temp');
+                        const output2 = this.shadowRoot.getElementById('cond');
+                        output1.textContent = data.main.temp;
+                        output2.textContent = data.weather.description;
                     })
                     .catch(error => {
                         // Handle any errors
