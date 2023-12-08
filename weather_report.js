@@ -34,7 +34,7 @@ class WeatherReport extends HTMLElement {
                     }
                 </style>`;
             const output = this.shadowRoot.querySelector('output');
-            const button = this.shadowRoot.querySelector('button');
+            const button = this.shadowRoot.querySelectorAll('button');
             button.addEventListener('click', () => {
                 // Call the fetch API
                 //
