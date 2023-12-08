@@ -39,14 +39,28 @@ class WeatherReport extends HTMLElement {
                         align-items: center;
                     }
                 </style>`;
+            
+           
+            
+
+       
+      
+
+        
+  
+   
+ //image citations: https://designbundles.net/sentretvector/2408953-weather-conditions-line-icon-cloud-cloudy-sun-rain
+    
+      
+        }
+        connectedCallback() {
+            this.fetchWeather();
+        }
+        fetchWeather(){
             const output = this.shadowRoot.querySelector('output');
             const buttons = this.shadowRoot.querySelectorAll('button');
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Call the fetch API
-                    //
-                    fetch('https://api.openweathermap.org/data/2.5/weather?lat=32.7157&lon=117.1611&appid=ece9582912061f945e67ad8dcd02be21')
-                        .then(response => {
+                 fetch('https://api.openweathermap.org/data/2.5/weather?lat=32.7157&lon=117.1611&appid=ece9582912061f945e67ad8dcd02be21')
+                    .then(response => {
                             // Check if the response is ok (status in the range 200-299)
                             if (!response.ok) {
                                 throw new Error('Network response was not ok');
@@ -71,18 +85,9 @@ class WeatherReport extends HTMLElement {
                             console.error('Fetch error:', error);
                             output.textContent = 'Error fetching time';
                         });
-                });
-            });
-
-       
-      
-
+                };
         
-  
-   
- //image citations: https://designbundles.net/sentretvector/2408953-weather-conditions-line-icon-cloud-cloudy-sun-rain
-    
-      
         }
-}
+    
+
 window.customElements.define('weather-report', WeatherReport)
