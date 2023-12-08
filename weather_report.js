@@ -20,9 +20,17 @@ class WeatherReport extends HTMLElement {
                         color: red;
                     }
                     .icon-button img {
-                        width: 24px; /* Adjust the width of the icon */
+                        width: 35px; /* Adjust the width of the icon */
                         height: 24px; /* Adjust the height of the icon */
                         margin-right: 5px; /* Adjust the margin between the icon and text (if any) */
+                    }
+                    .icon-button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
                     }
                 </style>`;
             const output = this.shadowRoot.querySelector('output');
