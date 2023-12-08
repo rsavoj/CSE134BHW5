@@ -29,7 +29,7 @@ class WeatherReport extends HTMLElement {
                     })
                     .then(data => {
                         // Display the time
-                        output.textContent = data.;
+                        output.textContent = data.main.temp;
                     })
                     .catch(error => {
                         // Handle any errors
