@@ -33,8 +33,8 @@ class WeatherReport extends HTMLElement {
                         // Display the time
                         const output1 = this.shadowRoot.getElementById('temp');
                         const output2 = this.shadowRoot.getElementById('cond');
-                        output1 = output1-273.15
-                        output1.textContent = data.main.temp;
+                        tempCel = parseInt(output1)-273.15
+                        tempCel.textContent = data.main.temp;
                         output2.textContent = data.weather.description;
                     })
                     .catch(error => {
