@@ -17,7 +17,7 @@ class WeatherReport extends HTMLElement {
                     }
                 </style>`;
             const output = this.shadowRoot.querySelector('output');
-            const button = this.shadowRoot.querySelector('button');
+            const button = this.shadowRoot.querySelectorAll('button');
             button.addEventListener('click', () => {
                 // Call the fetch API
                 //
@@ -33,8 +33,8 @@ class WeatherReport extends HTMLElement {
                         // Display the time
                         const output1 = this.shadowRoot.getElementById('temp');
                         const output2 = this.shadowRoot.getElementById('cond');
-                        tempCel = parseInt(output1)-273.15
-                        tempCel.textContent = data.main.temp;
+                        tempCel = parseInt(data.main.temp)-273.15
+                        output1.textContent = tempCel ;
                         output2.textContent = data.weather.description;
                     })
                     .catch(error => {
