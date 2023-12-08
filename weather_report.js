@@ -66,9 +66,11 @@ class WeatherReport extends HTMLElement {
                             const output1 = this.shadowRoot.getElementById('temp');
                             
                             let tempK = (data.main.temp)
-                            let tempC = tempK-273.15;
+                            let tempC = (tempK-273.15).toFixed(2);
+                            let tempF = (tempC * 9/5) + 32;
+
                             let cond = data.weather[0].description;
-                            let conditions = `The tempurature is ${tempC} \u00B0,${cond}`
+                            let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
                             output1.textContent = conditions;
                            
                         })
