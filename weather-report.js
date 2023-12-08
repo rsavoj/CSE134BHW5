@@ -13,8 +13,8 @@ class WeatherReport extends HTMLElement {
                         color: red;
                     }
                 </style>`;
-        const heading = document.createElement('h2');
-        heading.textContent = 'Ratings Widget';
+            const output = document.querySelector('output');
+            const button = document.querySelector('button');
 
        
       
