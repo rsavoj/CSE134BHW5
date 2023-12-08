@@ -3,6 +3,8 @@ class WeatherReport extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
+                
+                
                 <h3> Want the weather? </h3> 
                 <formfield>
                     <form>
@@ -19,6 +21,11 @@ class WeatherReport extends HTMLElement {
                     </form>
                     <style>
                     
+                    body{
+                        margin: 0;
+                        padding: 0;
+                        background-color: #e0e0e0;
+                    }
                     formfield {
                         border: 1px solid #ccc;
                         
