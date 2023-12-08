@@ -13,17 +13,13 @@ class WeatherReport extends HTMLElement {
                         </button>
                         <output id="temp"></output> 
                     </form>
+                    </formfield>
                 <section>
                     <style>
-                    
-                    section {
-                        margin: 0;
-                        padding: 0;
-                        background-color: grey;
-                    }
                     form {
                         border: 3px solid;
                         background-color: white;
+                        width: 100%;
                         
                     }
                     h3 {
