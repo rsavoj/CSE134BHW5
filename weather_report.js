@@ -8,10 +8,6 @@ class WeatherReport extends HTMLElement {
                 <h3> Want the weather? </h3> 
                 <formfield>
                     <form>
-                        
-                       
-                        <br>
-                        <br>
                         <button type="button" class="icon-button">
                             <img src="buttonImages/CondButton.png" alt="Icon">
                         </button>
