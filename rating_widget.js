@@ -116,6 +116,7 @@ class RatingWidget extends HTMLElement {
         const ratingInput = this.shadowRoot.getElementById('rating');
         ratingInput.value = 5;
     }
+    
       
 }
 window.customElements.define('rating-widget', RatingWidget)
