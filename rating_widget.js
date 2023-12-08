@@ -63,6 +63,8 @@ class RatingWidget extends HTMLElement {
         this.star4.addEventListener('click', () => this.onStarClick());
         this.star5.addEventListener('click', () => this.onStarClick());
     }
+  
+   
     onStarClick(){
         const formPressed = this.shadowRoot.getElementById('form1');
         formPressed.submit();
@@ -114,6 +116,6 @@ class RatingWidget extends HTMLElement {
         const ratingInput = this.shadowRoot.getElementById('rating');
         ratingInput.value = 5;
     }
-    
+      
 }
 window.customElements.define('rating-widget', RatingWidget)
