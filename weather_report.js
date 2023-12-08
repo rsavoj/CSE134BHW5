@@ -3,19 +3,26 @@ class WeatherReport extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
-                <h3> I want the weather </h3> 
+                <h3> Want the weather? </h3> 
                 
                 <form>
                 <button type="button">Tempurature</button>
                 <output id=temp></output> K
                 <br>
                 <br>
-                <button type="button">Conditions</button>
+                <button type="button" class="icon-button">
+                    <img src="buttonImages/CondButton.png" alt="Icon">
+                </button>
                 <output id=cond></output>
                 </form>
                 <style>
                     h3 {
                         color: red;
+                    }
+                    .icon-button img {
+                        width: 24px; /* Adjust the width of the icon */
+                        height: 24px; /* Adjust the height of the icon */
+                        margin-right: 5px; /* Adjust the margin between the icon and text (if any) */
                     }
                 </style>`;
             const output = this.shadowRoot.querySelector('output');
@@ -37,7 +44,7 @@ class WeatherReport extends HTMLElement {
                         const output2 = this.shadowRoot.getElementById('cond');
                         let tempK = (data.main.temp)
                         let tempC = tempK-273.15 
-                        output1.textContent = tempK;
+                        output1.textContent = tempC;
                         output2.textContent = data.weather[0].description;
                     })
                     .catch(error => {
