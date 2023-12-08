@@ -4,6 +4,10 @@ class WeatherReport extends HTMLElement {
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
                 <h3> I want the weather </h3> 
+                <output></output>
+                <form>
+                <button type="button">Get the weather?</button>
+                </form>
                 <style>
                     h3 {
                         color: red;
