@@ -36,9 +36,9 @@ class WeatherReport extends HTMLElement {
                         const output1 = this.shadowRoot.getElementById('temp');
                         const output2 = this.shadowRoot.getElementById('cond');
                         let tempK = (data.main.temp)
-                        
+                        let tempC = tempK-273.15 
                         output1.textContent = tempK;
-                        output2.textContent = data.weather.description;
+                        output2.textContent = data.weather[0].description;
                     })
                     .catch(error => {
                         // Handle any errors
