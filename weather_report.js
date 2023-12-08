@@ -9,6 +9,7 @@ class WeatherReport extends HTMLElement {
                 <button type="button">Tempurature</button>
                 <output id=temp></output> K
                 <br>
+                <br>
                 <button type="button">Conditions</button>
                 <output id=cond></output>
                 </form>
