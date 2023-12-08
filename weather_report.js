@@ -72,7 +72,7 @@ class WeatherReport extends HTMLElement {
         
   
    
- 
+ //image citations: https://designbundles.net/sentretvector/2408953-weather-conditions-line-icon-cloud-cloudy-sun-rain
     
       
         }
