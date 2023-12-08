@@ -4,22 +4,27 @@ class WeatherReport extends HTMLElement {
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
                 <h3> Want the weather? </h3> 
-                
-                <form>
-                <button type="button" class="icon-button">
-                Tempurature
-                </button>
-                <output id="temp"></output> K
-                <br>
-                <br>
-                <button type="button" class="icon-button">
-                    <img src="buttonImages/CondButton.png" alt="Icon">
-                </button>
-                <output id="cond"></output>
-                </form>
-                <style>
+                <formfield>
+                    <form>
+                        <button type="button" class="icon-button">
+                        Tempurature
+                        </button>
+                        <output id="temp"></output> K
+                        <br>
+                        <br>
+                        <button type="button" class="icon-button">
+                            <img src="buttonImages/CondButton.png" alt="Icon">
+                        </button>
+                        <output id="cond"></output>
+                    </form>
+                    <style>
+                    
+                    formfield {
+                        border: 1px solid #ccc;
+                        
+                    }
                     h3 {
-                        color: red;
+                        color: black;
                     }
                     .icon-button img {
                         width: 45px; /* Adjust the width of the icon */
