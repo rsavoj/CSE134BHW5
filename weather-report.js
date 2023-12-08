@@ -18,6 +18,7 @@ class WeatherReport extends HTMLElement {
             const button = this.shadowRoot.querySelector('button');
             button.addEventListener('click', () => {
                 // Call the fetch API
+                //
                 fetch('https://api.openweathermap.org/data/2.5/weather?lat=32&lon=118&appid=ece9582912061f945e67ad8dcd02be21')
                     .then(response => {
                         // Check if the response is ok (status in the range 200-299)
