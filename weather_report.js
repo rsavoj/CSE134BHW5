@@ -8,6 +8,7 @@ class WeatherReport extends HTMLElement {
                 <form>
                 <button type="button">Tempurature</button>
                 <output id=temp></output> K
+                <br>
                 <button type="button">Conditions</button>
                 <output id=cond></output>
                 </form>
@@ -34,7 +35,7 @@ class WeatherReport extends HTMLElement {
                         const output1 = this.shadowRoot.getElementById('temp');
                         const output2 = this.shadowRoot.getElementById('cond');
                         tempK = (data.main.temp)
-                        output1.textContent = tempCel;
+                        output1.textContent = tempK;
                         output2.textContent = data.weather.description;
                     })
                     .catch(error => {
