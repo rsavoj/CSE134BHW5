@@ -43,7 +43,7 @@ class WeatherReport extends HTMLElement {
                         border: none;
                         cursor: pointer;
                         padding: 0;
-                        display: flex;
+                        display: inline;
                         align-items: center;
                     }
                 </style>`;
