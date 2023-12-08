@@ -25,10 +25,11 @@ class WeatherReport extends HTMLElement {
                     section {
                         margin: 0;
                         padding: 0;
-                        background-color: red;
+                        background-color: grey;
                     }
                     form {
-                        border: 1px solid #ccc;
+                        border: 3px solid;
+                        background-color: white;
                         
                     }
                     h3 {
