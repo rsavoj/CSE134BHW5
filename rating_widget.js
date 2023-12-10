@@ -23,11 +23,13 @@ class RatingWidget extends HTMLElement {
                 color: orange;
             }
             .submited {
-                display: none;
+                visibility: hidden;
+            }
+            .output{
+                font-size: 3rem;
             }
         </style>`;
-        const heading = document.createElement('h2');
-        heading.textContent = 'Ratings Widget';
+  
 
         this.star1 = document.createElement('span');
         this.star1.innerHTML = '&star;'; 
