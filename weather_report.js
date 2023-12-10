@@ -72,16 +72,18 @@ class WeatherReport extends HTMLElement {
                             
                             const output1 = this.shadowRoot.getElementById('temp');
                             const weatherIcon = document.getElementById('icon');
-                            weatherIcon.src = iconUrl;
+                            
                             
                             let tempK = (data.main.temp)
                             let tempC = (tempK-273.15).toFixed(2);
                             let tempF = (tempC * 9/5) + 32;
                             try {
                                 const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+                                weatherIcon.src = iconUrl;
                             }
                             catch (error){
                                 console.error('Error constructing icon URL:', error);
+
                             }
 
                             let cond = data.weather[0].description;
