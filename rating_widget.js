@@ -74,12 +74,12 @@ class RatingWidget extends HTMLElement {
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        //const 
+    
         const testData = '{"name":"Jhon"}';
         // method target async
         xhr.open("POST", "https://eo8cvd1lrbou093.m.pipedream.net", true)
 
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Content-Type', 'text/html');
         xhr.setRequestHeader('X-Sent-By', 'JS');
        
         xhr.onreadystatechange = () =>
