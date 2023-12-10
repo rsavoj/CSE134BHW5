@@ -82,7 +82,7 @@ class RatingWidget extends HTMLElement {
         const testData = this.shadowRoot.getElementById('testElement');
         let formData = new FormData(formPressed);
         xhr.open("POST", 'https://httpbin.org/post', true);
-        xhr.setRequestHeader('Content-Type',  'application/');
+        xhr.setRequestHeader('Content-Type',  'application/x-www-form-urlencoded');
         xhr.setRequestHeader('X-Sent-By', 'JS');
         xhr.onload = function()
         {
