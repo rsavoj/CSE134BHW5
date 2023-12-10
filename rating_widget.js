@@ -3,6 +3,7 @@ class RatingWidget extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
         this.shadowRoot.innerHTML = `
+                <h1 id="testElement">test</h1>
                 <form id=form1 action="http://httpbin.org/post" method ="post">
                     <label for="rating">How satisfied are you feeling?</label>
                     <input type="hidden" name="question" value="How satisfied are you?">
@@ -74,11 +75,8 @@ class RatingWidget extends HTMLElement {
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-    
-         let testData = JSON.stringify({
-            name: "John",
-            surname: "Smith"
-          });
+        const testData = this.shadowRoot.getElementById('testElement');
+         
         // method target async
         // "https://eo8cvd1lrbou093.m.pipedream.net"
         xhr.open("POST", './example.xml', true)
