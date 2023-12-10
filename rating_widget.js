@@ -37,39 +37,11 @@ class RatingWidget extends HTMLElement {
         </style>`;
   
 
-        this.star1 = document.createElement('span');
-        this.star1.innerHTML = '&star;'; 
-        this.star1.id = 'star1';
-        this.star1.className = 'stars'; 
-
-
-        this.star2 = document.createElement('span');
-        this.star2.innerHTML = '&star;'; 
-        this.star2.id = 'star2';
-        this.star2.className = 'stars'; 
-
-
-        this.star3 = document.createElement('span');
-        this.star3.innerHTML = '&star;'; 
-        this.star3.id = 'star3';  
-        this.star3.className = 'stars'; 
-
-        this.star4 = document.createElement('span');
-        this.star4.innerHTML = '&star;'; 
-        this.star4.id = 'star4';
-        this.star4.className = 'stars'; 
-
-        this.star5 = document.createElement('span');
-        this.star5.innerHTML = '&star;'; 
-        this.star5.id = 'star5';  
-        this.star5.className = 'stars'; 
-        this.shadowRoot.appendChild(heading);
-        this.shadowRoot.appendChild(this.star1);
-        this.shadowRoot.appendChild(this.star2);
-        this.shadowRoot.appendChild(this.star3);
-        this.shadowRoot.appendChild(this.star4);
-        this.shadowRoot.appendChild(this.star5);
-
+        this.star1 = this.shadowRoot.getElementById('star1');
+        this.star2 = this.shadowRoot.getElementById('star2');
+        this.star3 = this.shadowRoot.getElementById('star3');
+        this.star4 = this.shadowRoot.getElementById('star4');
+        this.star5 = this.shadowRoot.getElementById('star5');
         this.star1.addEventListener('mouseover', () => this.onStarHoverOne());
         this.star2.addEventListener('mouseover', () => this.onStarHoverTwo());
         this.star3.addEventListener('mouseover', () => this.onStarHoverThree());
