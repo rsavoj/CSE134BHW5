@@ -104,7 +104,7 @@ class WeatherReport extends HTMLElement {
                             let cond = data.weather[0].description;
                             const units = this.shadowRoot.getElementById('units');
                             if (units.value === '1'){
-                                conditions = `The tempurature is ${tempF} \u00B0C, with ${cond}`
+                                conditions = `The tempurature is ${tempF} \u00B0F, with ${cond}`
                             }
                             else{
                                 conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
