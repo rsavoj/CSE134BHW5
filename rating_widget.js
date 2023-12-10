@@ -5,6 +5,7 @@ class RatingWidget extends HTMLElement {
        
     }
   
+    //This should not go in constructor interferes with dom manipulation
    connectedCallback(){
     this.shadowRoot.innerHTML = `
         <h1 id="testElement">test</h1>
@@ -74,30 +75,34 @@ class RatingWidget extends HTMLElement {
         this.sendRequest();
         //formPressed.submit();
     }
+    //cors error 
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
         const testData = this.shadowRoot.getElementById('testElement');
-         
-        // method target async
-        // "https://eo8cvd1lrbou093.m.pipedream.net"
-        // http://localhost:8080/update-xml
-        xhr.open("POST", 'https://eo8cvd1lrbou093.m.pipedream.net', true)
-
-        //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
-        xhr.setRequestHeader('Content-Type',  'application/xml');
+        let formData = new FormData(formPressed);
+        xhr.open("POST", 'https://httpbin.org/post', true);
+        xhr.setRequestHeader('Content-Type',  'application/');
         xhr.setRequestHeader('X-Sent-By', 'JS');
-        
-        xhr.oload = function()
+        xhr.onload = function()
         {
-            this.handleResponse(xhr);
+            if(xhr.status === 200){
+                this.handleResponse(xhr);
+            }else{
+                console.error('Error:', xhr.statusText)
+            }
         
         };
+        xhr.onerror = function(){
+            console.error('Network Error'); 
+        }
        
-        xhr.send(null);
+        //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
+       
+        xhr.send(formData);
     }
     handleResponse(xhr){
-        if(xhr.readyState == 4 && xhr.status == 200){
+        if(xhr.readyState === 4 && xhr.status === 200){
             console.log(xhr.status); // Log the HTTP status code
             console.log(xhr.responseText);
             var responce = JSON.parse(xhr.responseText);
