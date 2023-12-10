@@ -67,7 +67,17 @@ class RatingWidget extends HTMLElement {
    
     onStarClick(){
         const formPressed = this.shadowRoot.getElementById('form1');
-        formPressed.submit();
+        fetch('http://httpbin.org/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Host': 'httpbin.org',
+
+            },
+            body: "test"
+        })
+
+        //formPressed.submit();
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
