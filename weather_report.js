@@ -89,7 +89,7 @@ class WeatherReport extends HTMLElement {
                             
                             let tempK = (data.main.temp)
                             let tempC = (tempK-273.15).toFixed(2);
-                            let tempF = (tempC * 9/5) + 32;
+                            let tempF = ((tempC * 9/5) + 32).toFixed(2) ;
                             try {
                                 console.log("constructing image");
                                 const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
@@ -103,7 +103,7 @@ class WeatherReport extends HTMLElement {
                             let conditions;
                             let cond = data.weather[0].description;
                             const units = this.shadowRoot.getElementById('units');
-                            if (units.value){
+                            if (units.value === '1'){
                                 conditions = `The tempurature is ${tempF} \u00B0C, with ${cond}`
                             }
                             else{
