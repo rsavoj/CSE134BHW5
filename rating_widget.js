@@ -75,7 +75,7 @@ class RatingWidget extends HTMLElement {
     }
     updateScreen(){
        
-        let coloredStars = document.querySelectorAll('.colored');
+        let coloredStars = this.shadowRoot.querySelectorAll('.colored');
         console.log(coloredStars);
         for (const star of coloredStars){
             console.log('star');
