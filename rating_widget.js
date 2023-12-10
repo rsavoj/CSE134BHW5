@@ -76,7 +76,7 @@ class RatingWidget extends HTMLElement {
         const formPressed = this.shadowRoot.getElementById('form1');
         const testData = "Hi There";
         // method target async
-        xhr.open("GET", "http://httpbin.org/get", true)
+        xhr.open("POST", "http://localhost/", true)
        
         xhr.onreadystatechange = () =>
         {
