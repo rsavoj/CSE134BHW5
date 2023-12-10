@@ -99,16 +99,9 @@ class RatingWidget extends HTMLElement {
        
         //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
        
-        xhr.send(formData);
+        console.log(xhr.send(formData));
     }
-    handleResponse(xhr){
-        if(xhr.readyState === 4 && xhr.status === 200){
-            console.log(xhr.status); // Log the HTTP status code
-            console.log(xhr.responseText);
-            var responce = JSON.parse(xhr.responseText);
-            console.log(responce.name)
-        }
-    }
+  
     onStarHoverOne() {
         this.star1.classList.add('colored');
         this.star2.classList.remove('colored');
