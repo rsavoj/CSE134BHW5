@@ -22,7 +22,7 @@ class RatingWidget extends HTMLElement {
                 color: orange;
             }
             .submited {
-                display: hidden;
+                display: none;
             }
         </style>`;
         const heading = document.createElement('h2');
@@ -74,7 +74,6 @@ class RatingWidget extends HTMLElement {
         this.updateScreen();
     }
     updateScreen(){
-       
         let coloredStars = this.shadowRoot.querySelectorAll('.colored');
         console.log(coloredStars);
         for (const star of coloredStars){
