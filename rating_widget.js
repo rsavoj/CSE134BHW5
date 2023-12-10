@@ -12,13 +12,8 @@ class RatingWidget extends HTMLElement {
         <form id=form1 action="http://httpbin.org/post" method ="post">
             <label for="rating">How satisfied are you feeling?</label>
             <input type="hidden" name="question" value="How satisfied are you?">
-    
             <input type="hidden" name="sentBy" value="HTML">
-            
             <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
-    
-            
-
         </form>  
         <style>
             .colored  {
@@ -70,16 +65,13 @@ class RatingWidget extends HTMLElement {
         this.star5.addEventListener('click', () => this.onStarClick());
    }
     onStarClick(){
-        
-        
         this.sendRequest();
-        //formPressed.submit();
     }
     //cors error 
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        const testData = this.shadowRoot.getElementById('testElement');
+        
         let formData = new FormData(formPressed);
         xhr.open("POST", 'https://httpbin.org/post', true);
         xhr.setRequestHeader('Content-Type',  'application/x-www-form-urlencoded');
