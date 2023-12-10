@@ -31,8 +31,7 @@ class RatingWidget extends HTMLElement {
                 visibility: hidden;
             }
             output {
-                font-size: 3rem;
-
+                font-size: 1rem;
             }
         </style>`;
   
@@ -73,11 +72,11 @@ class RatingWidget extends HTMLElement {
             message.textContent = `Thanks for the feedback of ${rating} we will do better`
         }
         
-        //this.star1.removeEventListener('click', this.onStarClick);
-       // this.star2.removeEventListener('click', this.onStarClick);
-       // this.star3.removeEventListener('click', this.onStarClick);
-       // this.star4.removeEventListener('click', this.onStarClick);
-       // this.star5.removeEventListener('click', this.onStarClick);
+        this.star1.removeEventListener('click', this.onStarClick);
+        this.star2.removeEventListener('click', this.onStarClick);
+        this.star3.removeEventListener('click', this.onStarClick);
+        this.star4.removeEventListener('click', this.onStarClick);
+        this.star5.removeEventListener('click', this.onStarClick);
 
     }
     sendRequest(){
