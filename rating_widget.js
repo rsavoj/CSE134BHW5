@@ -75,18 +75,22 @@ class RatingWidget extends HTMLElement {
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
     
-        const testData = '{"name":"Jhon"}';
+         let testdata = JSON.stringify({
+            name: "John",
+            surname: "Smith"
+          });
         // method target async
-        xhr.open("POST", "https://eo8cvd1lrbou093.m.pipedream.net", true)
+        // "https://eo8cvd1lrbou093.m.pipedream.net"
+        xhr.open("POST", '/submit', true)
 
-        xhr.setRequestHeader('Content-Type', 'text/html');
+        xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
         xhr.setRequestHeader('X-Sent-By', 'JS');
        
-        xhr.onreadystatechange = () =>
-        {
-            this.handleResponse(xhr);
+        //xhr.onreadystatechange = () =>
+        //{
+            //this.handleResponse(xhr);
         
-        };
+       // };
        
         xhr.send(testData);
     }
