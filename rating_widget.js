@@ -92,6 +92,8 @@ class RatingWidget extends HTMLElement {
     }
     handleResponse(xhr){
         if(xhr.readyState == 4 && xhr.status == 200){
+            console.log(xhr.status); // Log the HTTP status code
+            console.log(xhr.responseText);
             var responce = JSON.parse(xhr.responseText);
             console.log(responce.name)
         }
