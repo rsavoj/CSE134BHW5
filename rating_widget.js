@@ -89,7 +89,7 @@ class RatingWidget extends HTMLElement {
     handleResponse(xhr){
         if(xhr.readyState == 4 && xhr.status == 200){
             var responce = xhr.responseXML;
-            console.log(responce)
+            console.log(responce.body)
         }
     }
     onStarHoverOne() {
