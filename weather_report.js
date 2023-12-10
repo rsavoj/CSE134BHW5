@@ -80,6 +80,7 @@ class WeatherReport extends HTMLElement {
                             try {
                                 const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
                                 weatherIcon.src = iconUrl;
+                                saveWeatherIconToLocal();
                             }
                             catch (error){
                                 console.error('Error constructing icon URL:', error);
@@ -94,7 +95,7 @@ class WeatherReport extends HTMLElement {
                         .catch(error => {
                             // Handle any errors
                             console.error('Fetch error:', error);
-                            output.textContent = 'Error fetching time';
+                            output.textContent = 'Error weather';
                         });
         
         }
