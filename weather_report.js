@@ -66,7 +66,7 @@ class WeatherReport extends HTMLElement {
             if(savedWeatherIcon){
                 this.shadowRoot.getElementById('icon').src = savedWeatherIcon;
             }
-            const units = this.shadowRoot.getElementById('units');
+            this.units = this.shadowRoot.getElementById('units');
             units.addEventListener('change', this.fetchWeather());
             
             this.fetchWeather();
