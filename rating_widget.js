@@ -8,7 +8,7 @@ class RatingWidget extends HTMLElement {
     //This should not go in constructor interferes with dom manipulation
    connectedCallback(){
     this.shadowRoot.innerHTML = `
-        <h1 id="testElement">test</h1>
+
         <form id=form1 action="http://httpbin.org/post" method ="post">
             <label for="rating">How satisfied are you feeling?</label>
             <input type="hidden" name="question" value="How satisfied are you?">
@@ -80,7 +80,7 @@ class RatingWidget extends HTMLElement {
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        let formData = new FormData(formPressed);
+        let formData = new FormData(this);
         xhr.open("POST", 'https://httpbin.org/post', true);
         xhr.setRequestHeader('Content-Type',  'application/x-www-form-urlencoded');
         xhr.setRequestHeader('X-Sent-By', 'JS');
