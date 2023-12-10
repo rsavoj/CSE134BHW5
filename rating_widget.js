@@ -6,10 +6,11 @@ class RatingWidget extends HTMLElement {
     }
   
     //This should not go in constructor interferes with dom manipulation
-   connectedCallback(){
+   //action="http://httpbin.org/post" method ="post"
+    connectedCallback(){
     this.shadowRoot.innerHTML = `
 
-        <form id=form1 action="http://httpbin.org/post" method ="post">
+        <form id=form1>
             <label for="rating">How satisfied are you feeling?</label>
             <input type="hidden" name="question" value="How satisfied are you?">
             <input type="hidden" name="sentBy" value="HTML">
