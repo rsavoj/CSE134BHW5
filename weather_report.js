@@ -54,6 +54,11 @@ class WeatherReport extends HTMLElement {
       
         }
         connectedCallback() {
+            const savedWeatherIcon = localStorage.getItem('savedWeatherIcon');
+            if(savedWeatherIcon){
+                document.getElementById('weatherIcon').src = savedWeatherIcon;
+            }
+            
             this.fetchWeather();
         }
         fetchWeather(){
