@@ -69,6 +69,7 @@ class RatingWidget extends HTMLElement {
    }
     onStarClick(){
         this.sendRequest();
+        this.updateScreen();
     }
     updateScreen(){
         let coloredStars = document.querySelectorAll('.colored');
