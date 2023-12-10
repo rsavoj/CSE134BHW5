@@ -72,9 +72,10 @@ class RatingWidget extends HTMLElement {
         this.updateScreen();
     }
     updateScreen(){
-        alert('function');
+       
         let coloredStars = document.querySelectorAll('.colored');
         for (const star of coloredStars){
+            console.log(star);
             star.replace('colored','submited');
         }
     }
