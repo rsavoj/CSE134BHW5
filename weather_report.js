@@ -85,7 +85,7 @@ class WeatherReport extends HTMLElement {
                             try {
                                 const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
                                 weatherIcon.src = iconUrl;
-                                saveWeatherIconToLocal();
+                                this.saveWeatherIconToLocal();
                             }
                             catch (error){
                                 console.error('Error constructing icon URL:', error);
