@@ -2,25 +2,29 @@ class RatingWidget extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'})
-        this.shadowRoot.innerHTML = `
-                <h1 id="testElement">test</h1>
-                <form id=form1 action="http://httpbin.org/post" method ="post">
-                    <label for="rating">How satisfied are you feeling?</label>
-                    <input type="hidden" name="question" value="How satisfied are you?">
-               
-                    <input type="hidden" name="sentBy" value="HTML">
-                    
-                    <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
-               
-                    
+       
+    }
+  
+   connectedCallback(){
+    this.shadowRoot.innerHTML = `
+        <h1 id="testElement">test</h1>
+        <form id=form1 action="http://httpbin.org/post" method ="post">
+            <label for="rating">How satisfied are you feeling?</label>
+            <input type="hidden" name="question" value="How satisfied are you?">
+    
+            <input type="hidden" name="sentBy" value="HTML">
+            
+            <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
+    
+            
 
-                </form>  
-                <style>
-                    .colored  {
-                        font-size: 2rem;
-                        color: orange;
-                    }
-                </style>`;
+        </form>  
+        <style>
+            .colored  {
+                font-size: 2rem;
+                color: orange;
+            }
+        </style>`;
         const heading = document.createElement('h2');
         heading.textContent = 'Ratings Widget';
 
@@ -28,11 +32,11 @@ class RatingWidget extends HTMLElement {
         this.star1.innerHTML = '&star;'; 
         this.star1.id = 'star1';
 
-        
+
         this.star2 = document.createElement('span');
         this.star2.innerHTML = '&star;'; 
         this.star2.id = 'star2';
-         
+
 
         this.star3 = document.createElement('span');
         this.star3.innerHTML = '&star;'; 
@@ -41,7 +45,7 @@ class RatingWidget extends HTMLElement {
         this.star4 = document.createElement('span');
         this.star4.innerHTML = '&star;'; 
         this.star4.id = 'star4';
-  
+
         this.star5 = document.createElement('span');
         this.star5.innerHTML = '&star;'; 
         this.star5.id = 'star5';  
@@ -63,9 +67,7 @@ class RatingWidget extends HTMLElement {
         this.star3.addEventListener('click', () => this.onStarClick());
         this.star4.addEventListener('click', () => this.onStarClick());
         this.star5.addEventListener('click', () => this.onStarClick());
-    }
-  
-   
+   }
     onStarClick(){
         
         
@@ -79,19 +81,20 @@ class RatingWidget extends HTMLElement {
          
         // method target async
         // "https://eo8cvd1lrbou093.m.pipedream.net"
-        xhr.open("POST", 'http://localhost:8080/update-xml', true)
+        // http://localhost:8080/update-xml
+        xhr.open("POST", 'https://eo8cvd1lrbou093.m.pipedream.net', true)
 
         //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
-        xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
+        xhr.setRequestHeader('Content-Type',  'application/xml');
         xhr.setRequestHeader('X-Sent-By', 'JS');
-       
-        //xhr.onreadystatechange = () =>
-        //{
-            //this.handleResponse(xhr);
         
-       // };
+        xhr.oload = function()
+        {
+            this.handleResponse(xhr);
+        
+        };
        
-        xhr.send(testData);
+        xhr.send(null);
     }
     handleResponse(xhr){
         if(xhr.readyState == 4 && xhr.status == 200){
