@@ -6,6 +6,13 @@ class WeatherReport extends HTMLElement {
                 
                 <section>
                 <h3> Want the weather? </h3> 
+                
+                    <select id="system">
+                        <option value="0">Celcious</option>
+                        <option value="1">Fahrenheit</option>
+   
+                    </select>
+               
                 <formfield>
                     <form>
                         <button type="button" class="icon-button">
