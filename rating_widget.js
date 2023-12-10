@@ -80,7 +80,7 @@ class RatingWidget extends HTMLElement {
        
         xhr.onreadystatechange = function()
         {
-            handleResponse(xhr);
+            this.handleResponse(xhr);
         
         };
        
