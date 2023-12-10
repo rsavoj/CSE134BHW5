@@ -74,7 +74,7 @@ class RatingWidget extends HTMLElement {
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        const testData = "Hi There";
+        const testData =formPressed;
         // method target async
         xhr.open("POST", "https://eo8cvd1lrbou093.m.pipedream.net", true)
        
