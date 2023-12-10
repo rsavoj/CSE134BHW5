@@ -23,9 +23,9 @@ class RatingWidget extends HTMLElement {
                 color: orange;
             }
             .submited {
-                display: none;
+                visibility: hidden;
             }
-            .output{
+            output {
                 font-size: 3rem;
 
             }
