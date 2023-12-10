@@ -9,7 +9,7 @@ class RatingWidget extends HTMLElement {
    //action="http://httpbin.org/post" method ="post"
     connectedCallback(){
     this.shadowRoot.innerHTML = `
-
+        <h2>Ratings Widget</h2>
         <form id=form1>
             <label for="rating">How satisfied are you feeling?</label>
             <input type="hidden" name="question" value="How satisfied are you?">
