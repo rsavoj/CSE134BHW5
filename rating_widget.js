@@ -82,6 +82,11 @@ class RatingWidget extends HTMLElement {
         this.star3.removeEventListener('click', this.onStarClick);
         this.star4.removeEventListener('click', this.onStarClick);
         this.star5.removeEventListener('click', this.onStarClick);
+        this.star1.removeEventListener('mouseover', this.onStarHoverOne);
+        this.star2.removeEventListener('mouseover', this.onStarHoverTwo);
+        this.star3.removeEventListener('mouseover', this.onStarHoverThree);
+        this.star4.removeEventListener('mouseover', this.onStarHoverFour);
+        this.star5.removeEventListener('mouseover', this.onStarHoverFive;
 
     }
     sendRequest(){
