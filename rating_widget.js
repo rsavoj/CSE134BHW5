@@ -66,23 +66,26 @@ class RatingWidget extends HTMLElement {
   
    
     onStarClick(){
-        const formPressed = this.shadowRoot.getElementById('form1');
+        
         
         this.sendRequest();
         //formPressed.submit();
     }
     sendRequest(){
         let xhr = new XMLHttpRequest();
+        const formPressed = this.shadowRoot.getElementById('form1');
+        const testData = "Hi There";
         // method target async
         xhr.open("POST", "http://httpbin.org/post", true)
+       
         xhr.onreadystatechange = function()
         {
             handleResponse(xhr);
         
         };
-        xhr.send(null);
+       
+        xhr.send(testData);
         
-        console.log(responce)
 
     }
     handleResponse(xhr){
