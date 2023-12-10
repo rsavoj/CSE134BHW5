@@ -78,15 +78,13 @@ class RatingWidget extends HTMLElement {
         // method target async
         xhr.open("POST", "http://httpbin.org/post", true)
        
-        xhr.onreadystatechange = function()
+        xhr.onreadystatechange = () =>
         {
             this.handleResponse(xhr);
         
         };
        
         xhr.send(testData);
-        
-
     }
     handleResponse(xhr){
         if(xhr.readyState == 4 && xhr.status == 200){
