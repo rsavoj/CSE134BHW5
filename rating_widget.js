@@ -75,7 +75,7 @@ class RatingWidget extends HTMLElement {
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
     
-         let testdata = JSON.stringify({
+         let testData = JSON.stringify({
             name: "John",
             surname: "Smith"
           });
