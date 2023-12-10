@@ -20,6 +20,9 @@ class RatingWidget extends HTMLElement {
                 font-size: 2rem;
                 color: orange;
             }
+            .submited {
+                display: hidden;
+            }
         </style>`;
         const heading = document.createElement('h2');
         heading.textContent = 'Ratings Widget';
@@ -67,11 +70,15 @@ class RatingWidget extends HTMLElement {
     onStarClick(){
         this.sendRequest();
     }
-    //cors error 
+    updateScreen(){
+        let coloredStars = document.querySelectorAll('.colored');
+        for (const star in coloredStars){
+            star.replace('colored','submited');
+        }
+    }
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        
         let formData = new FormData(formPressed);
         xhr.open("POST", 'https://httpbin.org/post', true);
         xhr.setRequestHeader('Content-Type',  'application/x-www-form-urlencoded');
@@ -88,9 +95,6 @@ class RatingWidget extends HTMLElement {
         xhr.onerror = function(){
             console.error('Network Error'); 
         }
-       
-        //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
-       
         xhr.send(formData);
     }
   
