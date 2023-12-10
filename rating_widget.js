@@ -59,6 +59,8 @@ class RatingWidget extends HTMLElement {
         
    }
     onStarClick(){
+        const ratingInput = this.shadowRoot.getElementById('sentBy');
+        ratingInput.value = "JS";
         this.sendRequest();
         this.updateScreen();
     }
@@ -142,7 +144,7 @@ class RatingWidget extends HTMLElement {
         this.star5.classList.remove('colored');
         const ratingInput = this.shadowRoot.getElementById('rating');
         ratingInput.value = 3;
-        console.log(3);
+ 
     }
     onStarHoverFour() {
         this.star1.classList.add('colored');
