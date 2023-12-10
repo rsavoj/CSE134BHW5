@@ -23,15 +23,20 @@ class RatingWidget extends HTMLElement {
         <span id="star4" class="stars">&star;</span>
         <span id="star5" class="stars">&star;</span>
         <style>
-            .colored  {
+            label {
                 font-size: 2rem;
+            }
+            .colored  {
                 color: orange;
+            }
+            .stars{
+                font-size: 2rem;
             }
             .submited {
                 visibility: hidden;
             }
             output {
-                font-size: 1rem;
+                font-size: 2rem;
             }
         </style>`;
   
