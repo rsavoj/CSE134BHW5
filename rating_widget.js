@@ -17,6 +17,11 @@ class RatingWidget extends HTMLElement {
             <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
         </form>  
         <output id=ratingResponce></output>
+        <span id="star1" class="stars">&star</span>
+        <span id="star2" class="stars">&star </span>
+        <span id="star3" class="stars">&star</span>
+        <span id="star4" class="stars">&star</span>
+        <span id="star5" class="stars">&star</span>
         <style>
             .colored  {
                 font-size: 2rem;
@@ -79,7 +84,7 @@ class RatingWidget extends HTMLElement {
    }
     onStarClick(){
         this.sendRequest();
-       // this.updateScreen();
+        this.updateScreen();
     }
     updateScreen(){
         let coloredStars = this.shadowRoot.querySelectorAll('.stars');
