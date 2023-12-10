@@ -7,11 +7,12 @@ class WeatherReport extends HTMLElement {
                 <section>
                 <h3> Want the weather? </h3> 
                 
-                    <select id="system">
+                    <select id="units">
+                    
                         <option value="0">Celcious</option>
                         <option value="1">Fahrenheit</option>
-   
                     </select>
+                    <br>
                
                 <formfield>
                     <form>
@@ -101,7 +102,14 @@ class WeatherReport extends HTMLElement {
                             }
 
                             let cond = data.weather[0].description;
-                            let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
+                            const units = this.shadowRoot.getElementById('units');
+                            if (units.value){
+                                let conditions = `The tempurature is ${tempF} \u00B0C, with ${cond}`
+                            }
+                            else{
+                                let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
+                            }
+                            
                             output1.textContent = conditions;
                            
                         })
