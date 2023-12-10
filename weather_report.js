@@ -83,6 +83,7 @@ class WeatherReport extends HTMLElement {
                             let tempC = (tempK-273.15).toFixed(2);
                             let tempF = (tempC * 9/5) + 32;
                             try {
+                                console.log("constructing image");
                                 const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
                                 weatherIcon.src = iconUrl;
                                 this.saveWeatherIconToLocal();
@@ -105,10 +106,10 @@ class WeatherReport extends HTMLElement {
         
         }
         saveWeatherIconToLocal() {
+            console.log("saving to local");
             const iconUrl = this.shadowRoot.getElementById('weatherIcon').src;
             localStorage.setItem('savedWeatherIcon', iconUrl);
-            alert('Weather icon saved to local storage!');
-        }
+        }    
     
     }
 window.customElements.define('weather-report', WeatherReport)
