@@ -2,7 +2,23 @@ class WeatherReport extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'})
-        this.shadowRoot.innerHTML = `
+        
+            
+           
+            
+
+       
+      
+
+        
+  
+   
+ //image citations: https://designbundles.net/sentretvector/2408953-weather-conditions-line-icon-cloud-cloudy-sun-rain
+    
+      
+        }
+        connectedCallback() {
+            this.shadowRoot.innerHTML = `
                 
                 <section>
                 <h3> Want the weather? </h3> 
@@ -47,21 +63,6 @@ class WeatherReport extends HTMLElement {
                         align-items: center;
                     }
                 </style>`;
-            
-           
-            
-
-       
-      
-
-        
-  
-   
- //image citations: https://designbundles.net/sentretvector/2408953-weather-conditions-line-icon-cloud-cloudy-sun-rain
-    
-      
-        }
-        connectedCallback() {
             const savedWeatherIcon = localStorage.getItem('savedWeatherIcon');
             if(savedWeatherIcon){
                 this.shadowRoot.getElementById('icon').src = savedWeatherIcon;
