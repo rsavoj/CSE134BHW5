@@ -31,24 +31,24 @@ class RatingWidget extends HTMLElement {
         this.star1 = document.createElement('span');
         this.star1.innerHTML = '&star;'; 
         this.star1.id = 'star1';
-        this.star5.className = 'stars'; 
+        this.star1.className = 'stars'; 
 
 
         this.star2 = document.createElement('span');
         this.star2.innerHTML = '&star;'; 
         this.star2.id = 'star2';
-        this.star5.className = 'stars'; 
+        this.star2.className = 'stars'; 
 
 
         this.star3 = document.createElement('span');
         this.star3.innerHTML = '&star;'; 
         this.star3.id = 'star3';  
-        this.star5.className = 'stars'; 
+        this.star3.className = 'stars'; 
 
         this.star4 = document.createElement('span');
         this.star4.innerHTML = '&star;'; 
         this.star4.id = 'star4';
-        this.star5.className = 'stars'; 
+        this.star4.className = 'stars'; 
 
         this.star5 = document.createElement('span');
         this.star5.innerHTML = '&star;'; 
@@ -84,7 +84,7 @@ class RatingWidget extends HTMLElement {
             console.log('star');
             star.classList.add('submited');
         }
-        let stars= this.shadowRoot.querySelectorAll('span');
+        
         //this.star1.removeEventListener('click', this.onStarClick());
        // this.star2.removeEventListener('click', this.onStarClick());
        // this.star3.removeEventListener('click', this.onStarClick());
