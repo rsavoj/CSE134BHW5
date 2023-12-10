@@ -23,7 +23,7 @@ class RatingWidget extends HTMLElement {
                 color: orange;
             }
             .submited {
-                visibility: hidden;
+                display: none;
             }
             .output{
                 font-size: 3rem;
