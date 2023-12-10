@@ -79,7 +79,7 @@ class RatingWidget extends HTMLElement {
          
         // method target async
         // "https://eo8cvd1lrbou093.m.pipedream.net"
-        xhr.open("POST", '/example.xml', true)
+        xhr.open("POST", 'http://localhost:8080/update-xml', true)
 
         //xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
         xhr.setRequestHeader('Content-Type',  'application/json; charset=utf-8');
