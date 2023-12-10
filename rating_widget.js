@@ -79,7 +79,7 @@ class RatingWidget extends HTMLElement {
         console.log(coloredStars);
         for (const star of coloredStars){
             console.log('star');
-            star.replace('colored','submited');
+            star.classList.replace('colored','submited');
         }
         //this.star1.removeEventListener('click', this.onStarClick());
        // this.star2.removeEventListener('click', this.onStarClick());
