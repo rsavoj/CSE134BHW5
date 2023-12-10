@@ -100,14 +100,14 @@ class WeatherReport extends HTMLElement {
                                 console.error('Error constructing icon URL:', error);
 
                             }
-
+                            let conditions;
                             let cond = data.weather[0].description;
                             const units = this.shadowRoot.getElementById('units');
                             if (units.value){
-                                let conditions = `The tempurature is ${tempF} \u00B0C, with ${cond}`
+                                conditions = `The tempurature is ${tempF} \u00B0C, with ${cond}`
                             }
                             else{
-                                let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
+                                conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
                             }
                             
                             output1.textContent = conditions;
