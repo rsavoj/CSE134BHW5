@@ -85,6 +85,13 @@ class RatingWidget extends HTMLElement {
             console.log('star');
             star.classList.add('submited');
         }
+        let rating =  this.shadowRoot.getElementById('rating')
+        let message = this.shadowRoot.getElementById('ratingResponce')
+        if(valueOf(rating) > 3 ){
+            message.textContent = `Thanks for the ${rating} star rating`
+        }else{
+            message.textContent = `Thanks for the feedback of ${rating} we will do better`
+        }
         
         //this.star1.removeEventListener('click', this.onStarClick());
        // this.star2.removeEventListener('click', this.onStarClick());
