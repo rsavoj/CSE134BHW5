@@ -107,7 +107,7 @@ class WeatherReport extends HTMLElement {
         }
         saveWeatherIconToLocal() {
             console.log("saving to local");
-            const iconUrl = this.shadowRoot.getElementById('weatherIcon').src;
+            const iconUrl = this.shadowRoot.getElementById('icon').src;
             localStorage.setItem('savedWeatherIcon', iconUrl);
         }    
     
