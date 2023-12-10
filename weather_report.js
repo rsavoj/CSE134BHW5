@@ -9,7 +9,7 @@ class WeatherReport extends HTMLElement {
                 <formfield>
                     <form>
                         <button type="button" class="icon-button">
-                            <img src="buttonImages/CondButton.png" alt="Icon">
+                            <img src="buttonImages/CondButton.png" alt="DefaultICON">
                         </button>
                         <output id="temp"></output> 
                     </form>
@@ -74,6 +74,7 @@ class WeatherReport extends HTMLElement {
                             let tempK = (data.main.temp)
                             let tempC = (tempK-273.15).toFixed(2);
                             let tempF = (tempC * 9/5) + 32;
+                            const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
                             let cond = data.weather[0].description;
                             let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
