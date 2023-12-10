@@ -144,45 +144,8 @@ body{
     color:black;
     font-family: baskerville;
 }
-#contact{
-    padding-bottom: 0.5rem;
-}
-button{
-    border-radius: 3rem;
-    color:var(--headerColorFont);
-    font-size: 1rem;
-    font-family: baskerville;
-    background-color: var(--backgroundColorHeader,olive);
-    &:hover{
-        background-color: var(--backgroundColorHeaderDark,darkgreen);
-        transform: scale(1.2,1.2)
-    }
-    &:active{
-        background-color: var(--backgroundColorHeaderDark,darkgreen);
-        transform: scale(1.2,1.2)
-    }
-}
 
-#introanimation{
-    color:var(--headerColorFont);
-    animation-name: buttonfloat;
-    position: relative;
-    animation-duration: 4s;
-    animation-delay: 0.5s;
-}
-@keyframes buttonfloat{
-    0%{
-        left:3%;
-        color:blue;
-        color:var(--color1);}
-    25%{ 
-        left:25%;
-        color:green;
-        color:var(--color0);
-    }
-    50%{left:50%; color:lightgrey;}
-    100%{left:70%;color:var(--headerColorFont);}
-}
+
 
 label{
     display: inline-block;
