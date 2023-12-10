@@ -76,11 +76,20 @@ class RatingWidget extends HTMLElement {
         // method target async
         xhr.open("POST", "http://httpbin.org/post", true)
         xhr.onreadystatechange = function()
-        {handleResponse(xhr);};
+        {
+            handleResponse(xhr);
+        
+        };
         xhr.send(null);
-        let responce = xhr.responseXML;
+        
         console.log(responce)
 
+    }
+    handleResponse(xhr){
+        if(xhr.readyState == 4 && xhr.status == 200){
+            var responce = xhr.responseXML;
+            console.log(responce)
+        }
     }
     onStarHoverOne() {
         this.star1.classList.add('colored');
