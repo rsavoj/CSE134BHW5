@@ -87,30 +87,17 @@ section{
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    
     background-color:var(--backgroundColorBody,olive);
 }
-#aboutme{
-    margin:0;
-    padding-top: 0.5rem; 
-    padding-bottom: 0.5rem;
-    background-color:var(--backgroundColorBody,olive); 
-    font-size: 1rem;  
-}
+
 img{
     margin: 0.5rem;
 }
 
-#pictures{
-    display: flex;
-    padding:0.2rem;
-
-}
 
 
-#aboutme>h2{
-    margin:0rem;   
-}
+
 details{
     margin: 1rem;
     padding: 0.5rem;
