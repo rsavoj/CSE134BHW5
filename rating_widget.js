@@ -74,7 +74,8 @@ class RatingWidget extends HTMLElement {
     sendRequest(){
         let xhr = new XMLHttpRequest();
         const formPressed = this.shadowRoot.getElementById('form1');
-        const testData =formPressed;
+        //const 
+        const testData = '{"name":"Jhon"}';
         // method target async
         xhr.open("POST", "https://eo8cvd1lrbou093.m.pipedream.net", true)
        
@@ -89,7 +90,7 @@ class RatingWidget extends HTMLElement {
     handleResponse(xhr){
         if(xhr.readyState == 4 && xhr.status == 200){
             var responce = xhr.responseXML;
-            console.log(responce)
+            console.log(responce.name)
         }
     }
     onStarHoverOne() {
