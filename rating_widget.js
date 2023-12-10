@@ -67,7 +67,7 @@ class RatingWidget extends HTMLElement {
         this.star3.addEventListener('click', () => this.onStarClick());
         this.star4.addEventListener('click', () => this.onStarClick());
         this.star5.addEventListener('click', () => this.onStarClick());
-        const clickFunction = this.onStarClick;;
+        
    }
     onStarClick(){
         this.sendRequest();
@@ -76,15 +76,16 @@ class RatingWidget extends HTMLElement {
     updateScreen(){
        
         let coloredStars = document.querySelectorAll('.colored');
+        console.log(coloredStars);
         for (const star of coloredStars){
             console.log('star');
             star.replace('colored','submited');
         }
-        this.star1.removeEventListener('click', clickFunction);
-        this.star2.removeEventListener('click', clickFunction);
-        this.star3.removeEventListener('click', clickFunction);
-        this.star4.removeEventListener('click', clickFunction);
-        this.star5.removeEventListener('click', clickFunction);
+        this.star1.removeEventListener('click', this.onStarClick());
+        this.star2.removeEventListener('click', this.onStarClick());
+        this.star3.removeEventListener('click', this.onStarClick());
+        this.star4.removeEventListener('click', this.onStarClick());
+        this.star5.removeEventListener('click', this.onStarClick());
 
     }
     sendRequest(){
