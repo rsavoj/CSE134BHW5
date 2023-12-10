@@ -69,8 +69,10 @@ class WeatherReport extends HTMLElement {
                         })
                         .then(data => {
                             // Display the time
+                            
                             const output1 = this.shadowRoot.getElementById('temp');
                             const weatherIcon = document.getElementById('icon');
+                            weatherIcon.src = iconUrl;
                             
                             let tempK = (data.main.temp)
                             let tempC = (tempK-273.15).toFixed(2);
