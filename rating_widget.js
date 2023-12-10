@@ -16,6 +16,7 @@ class RatingWidget extends HTMLElement {
             <input type="hidden" name="sentBy" value="HTML">
             <input type="hidden" id="rating" name="rating" min="1" max="5" value="0" required>
         </form>  
+        <output id=ratingResponce></output>
         <style>
             .colored  {
                 font-size: 2rem;
