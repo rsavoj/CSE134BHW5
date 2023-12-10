@@ -68,7 +68,7 @@ class RatingWidget extends HTMLElement {
     onStarClick(){
         const formPressed = this.shadowRoot.getElementById('form1');
         
-        sendRequest();
+        this.sendRequest();
         //formPressed.submit();
     }
     sendRequest(){
