@@ -73,7 +73,7 @@ class RatingWidget extends HTMLElement {
     }
     updateScreen(){
         let coloredStars = document.querySelectorAll('.colored');
-        for (const star in coloredStars){
+        for (const star of coloredStars){
             star.replace('colored','submited');
         }
     }
@@ -88,6 +88,7 @@ class RatingWidget extends HTMLElement {
         {
             if(xhr.status === 200){
                 console.log(xhr.responseText);
+                console.log(xhr.body)
             }else{
                 console.error('Error:', xhr.statusText)
             }
