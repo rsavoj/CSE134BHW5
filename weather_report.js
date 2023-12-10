@@ -9,7 +9,7 @@ class WeatherReport extends HTMLElement {
                 <formfield>
                     <form>
                         <button type="button" class="icon-button">
-                            <img src="buttonImages/CondButton.png" alt="DefaultICON">
+                            <img id="icon" src="buttonImages/CondButton.png" alt="ICON">
                         </button>
                         <output id="temp"></output> 
                     </form>
@@ -70,11 +70,13 @@ class WeatherReport extends HTMLElement {
                         .then(data => {
                             // Display the time
                             const output1 = this.shadowRoot.getElementById('temp');
+                            const weatherIcon = document.getElementById('icon');
                             
                             let tempK = (data.main.temp)
                             let tempC = (tempK-273.15).toFixed(2);
                             let tempF = (tempC * 9/5) + 32;
                             const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+
 
                             let cond = data.weather[0].description;
                             let conditions = `The tempurature is ${tempC} \u00B0C, with ${cond}`
@@ -86,9 +88,13 @@ class WeatherReport extends HTMLElement {
                             console.error('Fetch error:', error);
                             output.textContent = 'Error fetching time';
                         });
-                };
         
         }
+        saveWeatherIconToLocal() {
+            const iconUrl = document.getElementById('weatherIcon').src;
+            localStorage.setItem('savedWeatherIcon', iconUrl);
+            alert('Weather icon saved to local storage!');
+        }
     
-
+    }
 window.customElements.define('weather-report', WeatherReport)
