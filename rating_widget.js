@@ -81,11 +81,11 @@ class RatingWidget extends HTMLElement {
             console.log('star');
             star.replace('colored','submited');
         }
-        this.star1.removeEventListener('click', this.onStarClick());
-        this.star2.removeEventListener('click', this.onStarClick());
-        this.star3.removeEventListener('click', this.onStarClick());
-        this.star4.removeEventListener('click', this.onStarClick());
-        this.star5.removeEventListener('click', this.onStarClick());
+        //this.star1.removeEventListener('click', this.onStarClick());
+       // this.star2.removeEventListener('click', this.onStarClick());
+       // this.star3.removeEventListener('click', this.onStarClick());
+       // this.star4.removeEventListener('click', this.onStarClick());
+       // this.star5.removeEventListener('click', this.onStarClick());
 
     }
     sendRequest(){
