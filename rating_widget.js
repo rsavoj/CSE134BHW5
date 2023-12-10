@@ -88,6 +88,7 @@ class RatingWidget extends HTMLElement {
         xhr.open("POST", 'https://httpbin.org/post', true);
         xhr.setRequestHeader('Content-Type',  'application/x-www-form-urlencoded');
         xhr.setRequestHeader('X-Sent-By', 'JS');
+        const urlEncodedData = new URLSearchParams(formData).toString();
         xhr.onload = function()
         {
             if(xhr.status === 200){
@@ -101,7 +102,7 @@ class RatingWidget extends HTMLElement {
         xhr.onerror = function(){
             console.error('Network Error'); 
         }
-        xhr.send(formData);
+        xhr.send(urlEncodedData);
     }
   
     onStarHoverOne() {
